@@ -1,0 +1,1148 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "RESTful Swagger API 生成器",
+    "version": "1.0.0",
+    "title": "Swagger 脚本生成器",
+    "termsOfService": "admin",
+    "contact": {
+      "email": "admin"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "host": "petstore.swagger.io",
+  "basePath": "/v2",
+  "tags": [
+        {
+      "name": "OrderController",
+      "description": "OrderController"
+    },
+    {
+      "name": "OrderController",
+      "description": "OrderController"
+    },
+    {
+      "name": "OrderController",
+      "description": "OrderController"
+    },
+    {
+      "name": "OrderController",
+      "description": "OrderController"
+    },
+    {
+      "name": "OrderSkuController",
+      "description": "OrderSkuController"
+    },
+    {
+      "name": "OrderSkuController",
+      "description": "OrderSkuController"
+    },
+    {
+      "name": "OrderSkuController",
+      "description": "OrderSkuController"
+    },
+    {
+      "name": "OrderSkuController",
+      "description": "OrderSkuController"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/order": {
+      "get": {
+        "tags": [
+          "OrderController"
+        ],
+        "summary": "查询所有Order",
+        "description": "查询所有Order方法详情",
+        "operationId": "findAllUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "查询所有Order"
+            ,
+            "schema": {
+              "$ref": "#/definitions/RespResult«List«Order»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "OrderController"
+        ],
+        "summary": "添加Order",
+        "description": "添加Order方法详情",
+        "operationId": "addUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "添加Order方法详情",
+            "required": true
+              ,
+              "schema": {
+                "$ref": "#/definitions/Order"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "添加Order"
+            ,
+            "schema": {
+              "$ref": "#/definitions/RespResult"
+            }
+          }
+        }
+      }
+    },
+    "/order/{id}": {
+      "delete": {
+        "tags": [
+          "OrderController"
+        ],
+        "summary": "根据ID删除Order",
+        "description": "根据ID删除Order方法详情",
+        "operationId": "deleteUsingDELETE",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID删除Order方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID删除Order"
+            ,
+            "schema": {
+              "$ref": "#/definitions/RespResult"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "OrderController"
+        ],
+        "summary": "根据ID修改Order",
+        "description": "根据ID修改Order方法详情",
+        "operationId": "updateUsingPUT",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改Order方法详情",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "Order",
+            "description": "传入Order的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/Order"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改Order"
+            ,
+            "schema": {
+              "$ref": "#/definitions/RespResult"
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "OrderController"
+        ],
+        "summary": "根据ID查询Order",
+        "description": "根据ID查询Order方法详情",
+        "operationId": "findByIdUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改Order方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改Order"
+            ,
+            "schema": {
+              "$ref": "#/definitions/RespResult«Order»"
+            }
+          }
+        }
+      }
+    },
+    "/order/search": {
+      "post": {
+        "tags": [
+          "OrderController"
+        ],
+        "summary": "不带分页条件搜索Order",
+        "description": "不带分页条件搜索Order方法详情",
+        "operationId": "findListUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "Order",
+            "description": "传入Order的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/Order"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索Order"
+            ,
+            "schema": {
+              "$ref": "#/definitions/RespResult«List«Order»»"
+            }
+          }
+        }
+      }
+    },
+    "/order/search/{page}/{size}": {
+      "get": {
+        "tags": [
+          "OrderController"
+        ],
+        "summary": "分页列表查询Order",
+        "description": "分页列表查询Order方法详情",
+        "operationId": "findPageUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索Order"
+            ,
+            "schema": {
+              "$ref": "#/definitions/RespResult«List«Order»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "OrderController"
+        ],
+        "summary": "分页条件搜索Order",
+        "description": "分页条件搜索Order方法详情",
+        "operationId": "findPageUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "Order",
+            "description": "传入Order的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/Order"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "分页条件搜索Order"
+            ,
+            "schema": {
+              "$ref": "#/definitions/RespResult«List«Order»»"
+            }
+          }
+        }
+      }
+    },
+    "/orderSku": {
+      "get": {
+        "tags": [
+          "OrderSkuController"
+        ],
+        "summary": "查询所有OrderSku",
+        "description": "查询所有OrderSku方法详情",
+        "operationId": "findAllUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "查询所有OrderSku"
+            ,
+            "schema": {
+              "$ref": "#/definitions/RespResult«List«OrderSku»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "OrderSkuController"
+        ],
+        "summary": "添加OrderSku",
+        "description": "添加OrderSku方法详情",
+        "operationId": "addUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "添加OrderSku方法详情",
+            "required": true
+              ,
+              "schema": {
+                "$ref": "#/definitions/OrderSku"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "添加OrderSku"
+            ,
+            "schema": {
+              "$ref": "#/definitions/RespResult"
+            }
+          }
+        }
+      }
+    },
+    "/orderSku/{id}": {
+      "delete": {
+        "tags": [
+          "OrderSkuController"
+        ],
+        "summary": "根据ID删除OrderSku",
+        "description": "根据ID删除OrderSku方法详情",
+        "operationId": "deleteUsingDELETE",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID删除OrderSku方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID删除OrderSku"
+            ,
+            "schema": {
+              "$ref": "#/definitions/RespResult"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "OrderSkuController"
+        ],
+        "summary": "根据ID修改OrderSku",
+        "description": "根据ID修改OrderSku方法详情",
+        "operationId": "updateUsingPUT",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改OrderSku方法详情",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "OrderSku",
+            "description": "传入OrderSku的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/OrderSku"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改OrderSku"
+            ,
+            "schema": {
+              "$ref": "#/definitions/RespResult"
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "OrderSkuController"
+        ],
+        "summary": "根据ID查询OrderSku",
+        "description": "根据ID查询OrderSku方法详情",
+        "operationId": "findByIdUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "根据ID修改OrderSku方法详情",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "根据ID修改OrderSku"
+            ,
+            "schema": {
+              "$ref": "#/definitions/RespResult«OrderSku»"
+            }
+          }
+        }
+      }
+    },
+    "/orderSku/search": {
+      "post": {
+        "tags": [
+          "OrderSkuController"
+        ],
+        "summary": "不带分页条件搜索OrderSku",
+        "description": "不带分页条件搜索OrderSku方法详情",
+        "operationId": "findListUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "OrderSku",
+            "description": "传入OrderSku的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/OrderSku"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索OrderSku"
+            ,
+            "schema": {
+              "$ref": "#/definitions/RespResult«List«OrderSku»»"
+            }
+          }
+        }
+      }
+    },
+    "/orderSku/search/{page}/{size}": {
+      "get": {
+        "tags": [
+          "OrderSkuController"
+        ],
+        "summary": "分页列表查询OrderSku",
+        "description": "分页列表查询OrderSku方法详情",
+        "operationId": "findPageUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "不带分页搜索OrderSku"
+            ,
+            "schema": {
+              "$ref": "#/definitions/RespResult«List«OrderSku»»"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "OrderSkuController"
+        ],
+        "summary": "分页条件搜索OrderSku",
+        "description": "分页条件搜索OrderSku方法详情",
+        "operationId": "findPageUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "description": "当前页",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "size",
+            "description": "每页显示条数",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "OrderSku",
+            "description": "传入OrderSku的JSON对象",
+            "required": false
+              ,
+              "schema": {
+                "$ref": "#/definitions/OrderSku"
+              }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid status value(无效的状态值)"
+                      },
+          "403": {
+            "description": "403 Forbidden(请求被拒绝)"
+                      },
+          "404": {
+            "description": "not found(没有找到相关资源)"
+                      },
+          "405": {
+            "description": "Invalid input(无效的输入)"
+                      },
+          "500": {
+            "description": "服务器内部错误"
+                      },
+          "200": {
+            "description": "分页条件搜索OrderSku"
+            ,
+            "schema": {
+              "$ref": "#/definitions/RespResult«List«OrderSku»»"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "RespResult": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "type": "object",
+          "description": "逻辑数据"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "RespResult"
+    },
+    "RespResult«List«Order»»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "type": "array",
+          "description": "逻辑数据",
+          "items": {
+            "$ref": "#/definitions/Order"
+          }
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "RespResult"
+    },
+    "RespResult«Order»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,50000:失败"
+        },
+        "data": {
+          "description": "逻辑数据",
+          "$ref": "#/definitions/Order"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "RespResult"
+    },
+    "Order": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "订单id"
+        },
+        "totalNum": {
+          "type": "integer",
+          "format": "int32",
+          "description": "数量合计"
+        },
+        "moneys": {
+          "type": "integer",
+          "format": "int32",
+          "description": "金额合计"
+        },
+        "payType": {
+          "type": "string",
+          "description": "支付类型，1、在线支付、0 货到付款"
+        },
+        "createTime": {
+          "type": "date",
+          "description": "订单创建时间"
+        },
+        "updateTime": {
+          "type": "date",
+          "description": "订单更新时间"
+        },
+        "payTime": {
+          "type": "date",
+          "description": "付款时间"
+        },
+        "consignTime": {
+          "type": "date",
+          "description": "发货时间"
+        },
+        "endTime": {
+          "type": "date",
+          "description": "交易完成时间"
+        },
+        "username": {
+          "type": "string",
+          "description": "用户名称"
+        },
+        "recipients": {
+          "type": "string",
+          "description": "收货人"
+        },
+        "recipientsMobile": {
+          "type": "string",
+          "description": "收货人手机"
+        },
+        "recipientsAddress": {
+          "type": "string",
+          "description": "收货人地址"
+        },
+        "weixinTransactionId": {
+          "type": "string",
+          "description": "交易流水号"
+        },
+        "orderStatus": {
+          "type": "integer",
+          "format": "int32",
+          "description": "订单状态,0:未完成,1:已完成，2：已退货"
+        },
+        "payStatus": {
+          "type": "integer",
+          "format": "int32",
+          "description": "支付状态,0:未支付，1：已支付，2：支付失败"
+        },
+        "isDelete": {
+          "type": "integer",
+          "format": "int32",
+          "description": "是否删除"
+        }
+      },
+      "description": "Order"
+    },
+    "RespResult«List«OrderSku»»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,20001:失败,20002:用户名或密码错误,20003:权限不足,20004:远程调用失败,20005:重复操作,20006:没有对应的数据"
+        },
+        "data": {
+          "type": "array",
+          "description": "逻辑数据",
+          "items": {
+            "$ref": "#/definitions/OrderSku"
+          }
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "RespResult"
+    },
+    "RespResult«OrderSku»": {
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返回状态码,20000:成功,50000:失败"
+        },
+        "data": {
+          "description": "逻辑数据",
+          "$ref": "#/definitions/OrderSku"
+        },
+        "message": {
+          "type": "string",
+          "description": "提示信息"
+        }
+      },
+      "description": "RespResult"
+    },
+    "OrderSku": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "ID"
+        },
+        "categoryOneId": {
+          "type": "integer",
+          "format": "int32",
+          "description": "1级分类"
+        },
+        "categoryTwoId": {
+          "type": "integer",
+          "format": "int32",
+          "description": "2级分类"
+        },
+        "categoryThreeId": {
+          "type": "integer",
+          "format": "int32",
+          "description": "3级分类"
+        },
+        "spuId": {
+          "type": "string",
+          "description": "SPU_ID"
+        },
+        "skuId": {
+          "type": "string",
+          "description": "SKU_ID"
+        },
+        "orderId": {
+          "type": "string",
+          "description": "订单ID"
+        },
+        "name": {
+          "type": "string",
+          "description": "商品名称"
+        },
+        "price": {
+          "type": "integer",
+          "format": "int32",
+          "description": "单价"
+        },
+        "num": {
+          "type": "integer",
+          "format": "int32",
+          "description": "数量"
+        },
+        "money": {
+          "type": "integer",
+          "format": "int32",
+          "description": "总金额"
+        },
+        "image": {
+          "type": "string",
+          "description": "图片地址"
+        }
+      },
+      "description": "OrderSku"
+    }
+  },
+  "externalDocs": {
+    "description": "云商城",
+    "url": "admin"
+  }
+}
